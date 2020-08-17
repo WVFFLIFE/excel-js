@@ -1,32 +1,5 @@
-import ExcelComponent from '@core/ExcelComponent'
+import { ExcelComponent } from "@core/ExcelComponent";
 
-export default class Formula extends ExcelComponent {
-  static className = 'excel__formula'
+export class Formula extends ExcelComponent {
 
-  constructor($root) {
-    super($root, {
-      name: 'Formula',
-      listeners: ['input', 'click']
-    })
-  }
-
-  toHTML() {
-    return `
-      <div class="info">fx</div>
-      <div 
-        class="input" 
-        contenteditable="true"
-        spellcheck="false"
-      ></div>
-    `
-  }
-
-  onInput(event) {
-    console.log(this.$root)
-    console.log('onInput formula ', event.target.textContent.trim())
-  }
-
-  onClick() {
-     
-  }
 }
